@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div id="app">
+        <header class="header">
+          <h1>Dashboard</h1>
+          <button id="menuBtn">Menu</button>
+        </header>
+
+        <section class="content">
+          <div class="user-list">
+            <div class="user active" data-id="1">
+              <h3 class="name">Ejaz</h3>
+              <p class="role">Frontend Dev</p>
+            </div>
+
+            <div class="user" data-id="2">
+              <h3 class="name">Rahul</h3>
+              <p class="role">Backend Dev</p>
+            </div>
+
+            <div class="user" data-id="3">
+              <h3 class="name">Aman</h3>
+              <p class="role">Fullstack Dev</p>
+            </div>
+          </div>
+
+          <div class="details">
+            <p class="info">Select a user</p>
+            <button class="updateBtn">Update</button>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <p>© 2026</p>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
