@@ -4,7 +4,7 @@ $(function () {
   const ele = $(".user.active").find(".name").text("Ejaz Khan");
   // 2. Active user ko background yellow karo
 
-  $(".user.active").css("background-color", "yellow");
+  $(".user.active").addClass("active");
   //3. Sab users ke role text ko uppercase me convert karo
 
   // $(".role").each(function () {
@@ -33,15 +33,55 @@ $(function () {
   // 💡 Hint:
   // 👉 text se find karo → .parent()
 
-  $(".user-list")
-    .find(".name")
-    .each(function () {
-      const textName = $(this).text();
+  // $(".user-list")
+  //   .find(".name")
+  //   .each(function () {
+  //     const textName = $(this).text();
 
-      if (textName === "Aman") {
-        $(this).parent().css("background", "red");
-      }
+  //     if (textName === "Aman") {
+  //       $(this).parent().css("background", "red");
+  //     }
+  //   });
+
+  //     Q6. .user-list ke andar jitne bhi .user hai unko count karo
+
+  // 💡 Hint:
+  // 👉 .children() ya .find()
+
+  const count = $(".user-list").find(".user").length;
+  console.log(count);
+
+  console.log($(".user-list").children(".user").length);
+
+  console.log($(".user-list .user").length);
+
+  // Q7. Jab kisi .user par click ho:
+
+  // 👉 uska naam .details .info me show karo
+
+  // 💡 Hint:
+  // 👉 $(this) + .find() + .text()
+
+  $(".user-list")
+    .find(".user")
+    .click(function () {
+      let userText = $(this).find(".name").text().trim();
+      $(".details  .info").text(userText);
     });
 
+  //     Q8. Active user remove karo aur jispe click ho wo active ban jaye
+
+  // 💡 Hint:
+  // 👉 .removeClass() + .addClass()
+
+  $(".user").click(function () {
+    $(".user").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  //   Q9. "Aman" ke sibling users ko grey color karo
+
+  // 💡 Hint:
+  // 👉 .filter() + .siblings()
   // this is End
 });
